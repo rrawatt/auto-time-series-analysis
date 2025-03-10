@@ -1,0 +1,9 @@
+yfinance
+pandas
+numpy
+plotly
+statsmodels
+darts
+scikit-learn
+keras
+matplotlib
