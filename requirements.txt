@@ -3,7 +3,8 @@ pandas
 numpy
 plotly
 statsmodels
-darts
 scikit-learn
-keras
 matplotlib
+keras
+tensorflow
+kaleido==0.1.0.post1

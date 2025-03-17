@@ -1,4 +1,3 @@
-# src/models/dlmodels.py
 from keras.models import Sequential
 from keras.layers import Dense, LSTM, GRU
 from sklearn.preprocessing import MinMaxScaler
@@ -8,7 +7,7 @@ import plotly.graph_objects as go
 import pandas as pd
 
 def dl_output(df):
-    """Build and evaluate LSTM and GRU models on the Close price data."""
+
     def metric_funcs(actual, pred):
         def MAPE(actual, pred):
             return mean_absolute_percentage_error(actual, pred)
@@ -78,7 +77,7 @@ def dl_output(df):
         trace_pred = go.Scatter(x=valid.index, y=valid['Predictions'], mode='lines', name='Predicted', line=dict(color='red', dash='dash'))
         fig = go.Figure(data=[trace_train, trace_valid, trace_pred])
         fig.update_layout(title=f'{model_type} Model Predictions', xaxis_title='Date', yaxis_title='Close Price')
-        return metrics, fig
+        return metrics, fig, predictions, y_test
 
     return {
         'LSTM': rnn_model('LSTM'),

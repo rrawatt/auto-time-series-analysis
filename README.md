@@ -40,6 +40,8 @@ Auto Time Series Stock Analysis is a Python-based project designed to fetch, pro
 
 3. **Test Use:**
    ```bash
-   python main.py AAPL 2020-01-01 2021-01-01
+   python main.py AAPL 2020-01-01 2022-01-01
 
+### Collab Environment
 
+ - Can also run directly as in collab environment with report generation and plots.zip file generation
